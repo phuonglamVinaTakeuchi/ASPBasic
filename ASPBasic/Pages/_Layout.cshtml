@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Tự học ASP.net</title>
+    <style>
+        .header {
+            color: cadetblue;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Razor Layout</h1>
+    <hr/>
+    @RenderBody()
+    <hr/>
+    <h2 class="footer">Tu hoc ID - @DateTime.Now.Year</h2>
+    @RenderSection("Footer",false)
+</div>
+    @RenderSection("Scripts",false)
+</body>
+</html>

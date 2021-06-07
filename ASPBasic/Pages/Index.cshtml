@@ -1,0 +1,14 @@
+﻿@page "{handler?}"
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model ASPBasic.Pages.IndexModel
+@{
+}
+<h3>@Model.Message</h3>
+<form method="post" asp-page-handler="edit">
+    <p><button class="btn-primary" type="submit">Send Post Request</button></p>
+</form>
+<form method="post" asp-page-handler="delete">
+    <p><button class="btn-primary" type="submit">Send Post Request</button></p>
+</form>
+<p><a href="/" class="btn-primary">Send Get request</a></p>
+

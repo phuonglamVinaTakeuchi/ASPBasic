@@ -1,0 +1,1 @@
+﻿alert("This is an alert form Javascript");
