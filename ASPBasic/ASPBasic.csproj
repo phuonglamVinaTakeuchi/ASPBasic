@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Pages\About.cshtml.cs" />
     <Content Include="Pages\Index.cshtml.cs" />
   </ItemGroup>
 
@@ -15,7 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Upload\" />
     <Folder Include="Pages\api\forge\oauth\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>

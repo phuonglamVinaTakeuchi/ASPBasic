@@ -2,34 +2,33 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASPBasic.Interface;
+using ASPBasic.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json.Linq;
 
 namespace ASPBasic.Pages
 {
     public class IndexModel : PageModel
     {
-        public string Message { get; set; }
+        private readonly IRepository _repository;
+        public HashSet<Book> Books => _repository.Books;
+        public int Count => _repository.Books.Count;
+        public IndexModel(IRepository repository) => _repository = repository;
+
         public void OnGet()
         {
-            Message = "this is a get request";
-        }
-        public IActionResult OnPost()
-        {
-            Message = "this is a post request";
-            return new RedirectToPageResult("About");
+            
         }
 
-        public void OnPostDelete()
+        public void OnPost()
         {
-            Message = "this is a Delete post request";
+           
+
         }
-        public IActionResult OnPostEdit(int id)
-        {
-            Message = "this is a Edit post request";
-            return new RedirectToPageResult("About");
-        }
+
 
     }
 }

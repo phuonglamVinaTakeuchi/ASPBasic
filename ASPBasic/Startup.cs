@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASPBasic.Interface;
+using ASPBasic.Repository;
 
 namespace ASPBasic
 {
@@ -17,7 +19,8 @@ namespace ASPBasic
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            
+            services.AddSingleton<IRepository, BookRepository>();
+
 
         }
 

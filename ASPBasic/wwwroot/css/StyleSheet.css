@@ -1,1 +1,10 @@
 ﻿h1{color: brown}
+h2{color: green}
+.header {
+    color: cadetblue;
+}
+
+.footer {
+    text-align: center;
+    font-size: small;
+}
